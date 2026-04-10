@@ -28,8 +28,8 @@ export default function SetUp() {
                 <div className="row justify-content-center g-5 mt-5">
                     {
                         cardItems.map((card) => (
-                            <div className="col-11 col-lg-4">
-                                <Card card={card} key={card.number} />
+                            <div className="col-11 col-lg-4" key={card.number}>
+                                <Card card={card} />
                             </div>
                         ))
                     }

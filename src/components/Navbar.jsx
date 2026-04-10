@@ -23,13 +23,13 @@ export default function Navbar() {
                             <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="#">Products</a>
+                            <a href="#premium">Products</a>
                         </li>
                         <li>
-                            <a href="#">How It Works</a>
+                            <a href="#setup">How It Works</a>
                         </li>
                         <li>
-                            <a href="#">Contact Us</a>
+                            <a href="#contact">Contact Us</a>
                         </li>
                     </ul>
 
@@ -48,9 +48,9 @@ export default function Navbar() {
 
                 <div className="sidebar-list">
                     <a href="#">Home</a>
-                    <a href="#">Products</a>
-                    <a href="#">How It Works</a>
-                    <a href="#">Contact Us</a>
+                    <a href="#premium">Products</a>
+                    <a href="#setup">How It Works</a>
+                    <a href="#contact">Contact Us</a>
                 </div>
             </nav>
         </>
