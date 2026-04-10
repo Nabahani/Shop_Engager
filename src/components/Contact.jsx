@@ -4,7 +4,7 @@ export default function Contact() {
         <section id="contact">
             <div className="container text-center">
                 <div className="phone-mark">
-                    <i class="bi bi-telephone"></i>
+                    <i className="bi bi-telephone"></i>
                     Get In Touch
                 </div>
 
@@ -19,7 +19,7 @@ export default function Contact() {
 
                             <div className="info">
                                 <div className="wrapper-container">
-                                    <i class="bi bi-geo-alt green"></i>
+                                    <i className="bi bi-geo-alt green"></i>
                                     <div>
                                         <h5>Address</h5>
                                         <p>Yakasai Kano</p>
@@ -27,7 +27,7 @@ export default function Contact() {
                                 </div>
 
                                 <div className="wrapper-container">
-                                    <i class="bi bi-envelope blue"></i>
+                                    <i className="bi bi-envelope blue"></i>
                                     <div>
                                         <h5>Email</h5>
                                         <p>info@engager.tech</p>
@@ -35,7 +35,7 @@ export default function Contact() {
                                 </div>
 
                                 <div className="wrapper-container">
-                                    <i class="bi bi-telephone red"></i>
+                                    <i className="bi bi-telephone red"></i>
                                     <div>
                                         <h5>Phone</h5>
                                         <p>+234 702 585 6080</p>
@@ -54,7 +54,7 @@ export default function Contact() {
 
                                         <div className="input-group">
                                             <div className="input-group-text">
-                                                <i class="bi bi-person person"></i>
+                                                <i className="bi bi-person person"></i>
                                             </div>
                                             <input type="text" name="name" id="name" className="form-control" placeholder="Your Name" />
                                         </div>
@@ -67,7 +67,7 @@ export default function Contact() {
 
                                         <div className="input-group">
                                             <div className="input-group-text">
-                                                <i class="bi bi-envelope"></i>
+                                                <i className="bi bi-envelope"></i>
                                             </div>
                                             <input type="email" name="email" id="email" className="form-control" placeholder="Your Email" />
                                         </div>
@@ -82,7 +82,7 @@ export default function Contact() {
 
                             <div className="text-center">
                                 <button className="btn" type="submit">
-                                    <i class="bi bi-send me-2"></i>
+                                    <i className="bi bi-send me-2"></i>
                                     Send Message
                                 </button>
 

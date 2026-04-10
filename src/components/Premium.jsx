@@ -41,7 +41,7 @@ export default function Premium() {
 
     return (
         <section id="premium">
-            <div className="conatiner text-center">
+            <div className="container text-center">
                 <div className="rated">
                     <i className="bi bi-lightning-charge"></i>
                     <span className="rated-span">PREMIUM NFC PRODUCTS

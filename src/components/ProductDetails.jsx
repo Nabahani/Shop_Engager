@@ -17,7 +17,7 @@ export default function ProductDetails() {
                             <div className="product-container">
                                 <div className="flex-container">
                                     <div>
-                                        <i class="bi bi-box"></i>
+                                        <i className="bi bi-box"></i>
                                     </div>
 
                                     <div className="subtitle">
@@ -28,7 +28,7 @@ export default function ProductDetails() {
 
                                 <div className="flex-container">
                                     <div>
-                                        <i class="bi bi-phone second"></i>
+                                        <i className="bi bi-phone second"></i>
                                     </div>
 
                                     <div className="subtitle">
@@ -39,7 +39,7 @@ export default function ProductDetails() {
 
                                 <div className="flex-container">
                                     <div>
-                                        <i class="bi bi-check2-square third"></i>
+                                        <i className="bi bi-check2-square third"></i>
                                     </div>
 
                                     <div className="subtitle">

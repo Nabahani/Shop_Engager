@@ -265,7 +265,6 @@ section#premium .title {
   scrollbar-width: none;
   -ms-overflow-style: none;
   align-items: stretch;
-  overflow-x: hidden;
 }
 
 .pricing-container::-webkit-scrollbar {
@@ -592,6 +591,7 @@ form.form .btn:active {
 }
 
 p.response {
+  display: none;
   font-weight: 500;
   background-color: rgba(0, 280, 0, .12);
   color: rgb(108, 203, 108);
