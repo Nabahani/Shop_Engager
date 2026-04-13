@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom"
+
 export default function PricingCard({ card }) {
+
+    const navigate = useNavigate();
 
     return (
         <div className="pricing-card text-start h-100">
-            {/* <i class={card.icon}></i> */}
             <div className="pricing-image-container">
                 <img src={card.image} alt={card.title} style={{ width: "100%", height: "100%" }} />
                 <p className="hint-top">{card.hint}</p>
@@ -31,7 +34,7 @@ export default function PricingCard({ card }) {
                     </div>
 
                     <div className="text-center">
-                        <button className="custom-button">
+                        <button className="custom-button" onClick={() => navigate(`/checkout/${card.key}`)}>
                             <i className="bi bi-cart2"></i>
                             Buy Now
                         </button>

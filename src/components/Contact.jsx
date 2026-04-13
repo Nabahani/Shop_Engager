@@ -1,4 +1,41 @@
+import { useForm } from 'react-hook-form';
+import { useEffect } from 'react';
+
 export default function Contact() {
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm();
+
+    function saveMessage(data) {
+        const messages = JSON.parse(localStorage.getItem("messages")) || [];
+
+        if (data) {
+            messages.push(data);
+            localStorage.setItem("messages", JSON.stringify(messages));
+
+            const successEl = document.querySelector(".success-response");
+            successEl.style.display = "block";
+            return;
+        }
+    }
+
+    function clearForm() {
+        const nameInputEl = document.getElementById("name");
+        const emailInputEl = document.getElementById("email");
+        const textareaEl = document.getElementById("message");
+
+        nameInputEl.value = "";
+        emailInputEl.value = "";
+        textareaEl.value = "";
+    }
+
+    function onSubmit(data) {
+        saveMessage(data);
+        clearForm();
+    }
 
     return (
         <section id="contact">
@@ -46,7 +83,7 @@ export default function Contact() {
                     </div>
 
                     <div className="col-11 col-lg-7">
-                        <form className="form">
+                        <form className="form" onSubmit={handleSubmit(onSubmit)}>
                             <div className="row">
                                 <div className="col-12 col-xl-6">
                                     <div className="name-email">
@@ -56,8 +93,10 @@ export default function Contact() {
                                             <div className="input-group-text">
                                                 <i className="bi bi-person person"></i>
                                             </div>
-                                            <input type="text" name="name" id="name" className="form-control" placeholder="Your Name" />
+                                            <input type="text" name="name" id="name" className="form-control" placeholder="Your Name" autoComplete='off' {...register("name", { required: "Name is required" })} />
                                         </div>
+
+                                        {errors.name && <span className="error">{errors.name.message}</span>}
                                     </div>
                                 </div>
 
@@ -69,15 +108,19 @@ export default function Contact() {
                                             <div className="input-group-text">
                                                 <i className="bi bi-envelope"></i>
                                             </div>
-                                            <input type="email" name="email" id="email" className="form-control" placeholder="Your Email" />
+                                            <input type="email" name="email" id="email" className="form-control" autoComplete='off' placeholder="Your Email" {...register("email", { required: "Email is required" })} />
                                         </div>
+
+                                        {errors.email && <span className="error">{errors.email.message}</span>}
                                     </div>
                                 </div>
                             </div>
 
                             <div className="message mt-4">
                                 <label htmlFor="message" className="form-label">Message</label>
-                                <textarea name="message" id="message" className="form-control" placeholder="How can we help?" rows={4}></textarea>
+                                <textarea name="message" id="message" className="form-control" placeholder="How can we help?" {...register("userMessage", { required: "Message is required" })} rows={4}></textarea>
+
+                                {errors.userMessage && <span className="error">{errors.userMessage.message}</span>}
                             </div>
 
                             <div className="text-center">
@@ -86,9 +129,14 @@ export default function Contact() {
                                     Send Message
                                 </button>
 
-                                <p className="response">
+                                <p className="success-response">
                                     <span className="icon">✅</span>
                                     Message sent! We'll get back to you soon.
+                                </p>
+
+                                <p className="failed-response">
+                                    ❌
+                                    Network error. Please try again.
                                 </p>
                             </div>
                         </form>

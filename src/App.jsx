@@ -1,23 +1,20 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import HomeSection from './components/HomeSection';
-import Reviews from './components/Reviews';
-import SetUp from './components/SetUp';
-import Premium from './components/Premium';
-import ProductDetails from './components/ProductDetails';
-import Contact from './components/Contact';
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage';
+import Checkout from './pages/Checkout';
+import ProductProvider from './context/ProductContext';
 
 function App() {
   return (
     <>
-      <Navbar />
+      <ProductProvider>
 
-      <HomeSection />
-      <Reviews />
-      <SetUp />
-      <Premium />
-      <ProductDetails />
-      <Contact />
+        <Routes>
+          <Route path='/' element={<HomePage />}></Route>
+          <Route path='/checkout/:id' element={<Checkout />}></Route>
+        </Routes>
+
+      </ProductProvider>
     </>
   )
 }

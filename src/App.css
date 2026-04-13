@@ -571,6 +571,13 @@ form.form input::placeholder,
   font-size: 18px;
 }
 
+span.error {
+  color: rgb(255, 47, 47);
+  font-size: 18px;
+  display: block;
+  margin-top: 5px;
+}
+
 form.form .btn {
   font-size: 22px;
   color: cyan;
@@ -590,7 +597,7 @@ form.form .btn:active {
   color: aliceblue;
 }
 
-p.response {
+p.success-response {
   display: none;
   font-weight: 500;
   background-color: rgba(0, 280, 0, .12);
@@ -598,11 +605,317 @@ p.response {
   padding: 15px 10px;
   border-radius: 10px;
   border: 1px solid rgba(108, 203, 108, .2);
+  transition: all 2s ease;
 }
 
-p.response .icon {
+p.success-response .icon {
   margin-right: 5px;
 }
+
+p.failed-response {
+  display: none;
+  font-weight: 500;
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 0, 0, .3);
+  background-color: rgba(226, 54, 54, 0.2);
+  color: rgb(255, 0, 0);
+}
+
+section#footer {
+  position: relative;
+  background-color: rgb(11, 24, 43);
+  overflow: hidden;
+}
+
+section#footer::before {
+  position: absolute;
+  content: "";
+  background: radial-gradient(circle, rgba(0, 255, 213, 0.27) 2%, transparent 70%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  top: -40px;
+  left: -40px;
+  filter: blur(40px);
+}
+
+section#footer::after {
+  position: absolute;
+  content: "";
+  background: radial-gradient(circle, rgba(60, 128, 255, 0.25) 2%, transparent 60%);
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  bottom: -50px;
+  right: -40px;
+  border: 1.5px solid rgb(150, 150, 150, .2);
+}
+
+.top-footer {
+  padding: 3.75rem 0 2.5rem 0;
+}
+
+h4.footer-title {
+  color: #e7f4ff;
+  font-size: 21.5px;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+}
+
+h4.engager-title {
+  font-size: 23.5px;
+  color: cyan;
+  margin-bottom: 2rem;
+}
+
+p.footer-text {
+  color: #c4e4ff;
+  font-size: 18.5px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #c4e4ff;
+  font-size: 18.5px;
+  margin-bottom: 10px;
+  transition: all .3s ease-in-out;
+  padding: 0;
+}
+
+.footer-links a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-underline-offset: 2.5px;
+}
+
+.bottom-footer {
+  border-top: 1px solid rgb(150, 150, 150, .2);
+  padding: 20px 0;
+}
+
+.bottom-footer a {
+  text-decoration: none;
+  margin-right: 35px;
+  font-size: 17.5px;
+  color: #709abc;
+  transition: all .2s ease-in-out;
+}
+
+.bottom-footer a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.copyright {
+  color: #709abc;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.engager-span {
+  color: rgb(218, 218, 218);
+  font-size: 18.5px;
+  font-weight: 500;
+}
+
+section.checkout {
+  background-color: rgba(6, 15, 29);
+  padding: 4rem 0;
+}
+
+button.back-btn {
+  color: #c4e4ff;
+  background-color: transparent;
+  border: none;
+}
+
+button.back-btn i {
+  margin-right: 10px;
+}
+
+.order-title {
+  color: white;
+  font-size: 39px;
+  font-weight: 650;
+  margin: 40px 0 30px 0;
+}
+
+.left-container {
+  background-color: rgb(11, 24, 43);
+  border: 1px solid rgb(150, 150, 150, .2);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 2rem 2.5rem;
+}
+
+.order-subtitle {
+  color: rgb(233, 233, 233);
+  border-bottom: 1px solid rgb(150, 150, 150, .2);
+  padding: 10px 0;
+  font-size: 23.5px;
+  font-weight: 650;
+}
+
+.order-label {
+  color: #c4e4ff;
+  font-size: 19.5px;
+  margin-top: 1.5em;
+}
+
+.order-form .input-group-text,
+.order-form input,
+.order-form .input-group-text:focus,
+.order-form input:focus {
+  background-color: rgb(59, 73, 93, .35);
+  border: 1px solid rgba(250, 250, 250, .2);
+  color: #a0aeba;
+  font-size: 18px;
+  padding: 14px 20px;
+}
+
+.order-design-section {
+  margin-top: 2.5rem;
+}
+
+input#color,
+input#logo {
+  padding: 7px 15px;
+}
+
+button.order-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 3rem;
+  border: none;
+  font-size: 23px;
+  font-weight: 600;
+  padding: 18px 15px;
+  border-radius: 10px;
+}
+
+.summary {
+  background-color: rgb(11, 24, 43);
+  border: 1px solid rgb(150, 150, 150, .2);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 2rem 2.5rem;
+}
+
+.summary .order-subtitle {
+  border: none;
+}
+
+.order-image-details {
+  display: flex;
+  align-items: center;
+  margin: 25px 0 35px 0;
+}
+
+.order-image-container {
+  width: 105px;
+  height: 85px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+  background-color: rgba(6, 15, 29);
+}
+
+.order-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.order-subtitle.custom-font {
+  font-size: 20px;
+}
+
+.order-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary p {
+  color: #81878c;
+}
+
+p.custom-weight {
+  font-weight: 600;
+  font-size: 21px;
+  color: white;
+}
+
+.order-top-container {
+  border-bottom: 1px solid rgb(150, 150, 150, .2);
+}
+
+.order-bottom-container {
+  padding-top: 30px;
+}
+
+p.total {
+  font-weight: 650;
+  font-size: 24px;
+  color: white;
+}
+
+.green-container {
+  background-color: rgba(0, 230, 20, .1);
+  color: #a0aeba;
+  padding: 22px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(72, 149, 72, 0.2);
+  margin-top: 18px;
+}
+
+h5.how-it-works {
+  font-size: 17px;
+  color: rgb(17, 224, 137);
+}
+
+.green-container ol {
+  padding-left: 24px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.green-container ol li {
+  font-size: 16px;
+}
+
+.bold-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.encrypted-checkout {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 16.5px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.encrypted-checkout i {
+  margin-right: 10px;
+}
+
+p.good-response {
+  display: none;
+  margin-top: 30px;
+  box-shadow: 2px 2px 10px 10px rgba(108, 203, 108, .1);
+}
+
+
 
 
 
@@ -655,6 +968,20 @@ p.response .icon {
   .message textarea:focus {
     padding: 10px 15px;
   }
+
+  .right-container {
+    padding: 2rem;
+  }
+
+  .summary {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .summary ol li {
+    margin-bottom: 2px;
+  }
+
 }
 
 @media (min-width: 1000px) {
@@ -725,5 +1052,40 @@ p.response .icon {
 
   .title {
     font-size: 2.1rem;
+  }
+
+  button.back-btn {
+    font-size: 19px;
+  }
+
+  .order-title {
+    font-size: 36px;
+  }
+
+  .order-subtitle {
+    font-size: 22px;
+  }
+
+  .order-label {
+    font-size: 17px;
+  }
+
+  .order-form .input-group-text,
+  .order-form input,
+  .order-form .input-group-text:focus,
+  .order-form input:focus {
+    padding: 11px 17px;
+  }
+
+  button.order-btn {
+    font-size: 20px;
+  }
+
+  .summary {
+    padding: 2rem 1.8rem;
+  }
+
+  .summary .custom-font {
+    font-size: 17px;
   }
 }
