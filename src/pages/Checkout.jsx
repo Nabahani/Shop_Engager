@@ -2,12 +2,14 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../context/ProductContext";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
 
     const { id } = useParams();
     const { getProductById } = useContext(ProductContext);
     const product = getProductById(Number(id));
+    const navigate = useNavigate();
 
     const {
         handleSubmit,
@@ -31,10 +33,14 @@ function Checkout() {
         clearForm();
     }
 
+    const goBack = () => {
+        navigate(-1);
+    }
+
     return (
         <section className="checkout">
             <div className="container">
-                <button className="back-btn">
+                <button className="back-btn" onClick={() => goBack()}>
                     <i className="bi bi-arrow-left"></i>
                     Back
                 </button>

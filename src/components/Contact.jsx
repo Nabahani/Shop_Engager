@@ -1,5 +1,4 @@
 import { useForm } from 'react-hook-form';
-import { useEffect } from 'react';
 
 export default function Contact() {
 
